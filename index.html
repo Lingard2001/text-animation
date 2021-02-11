@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+  <link rel="stylesheet" href="main.css ">
+</head>
+
+<body>
+    <h1>Text Animation</h1>
+    <ul>
+        <li>G</li>
+        <li>I</li>
+        <li>T</li>
+        <li>&nbsp;</li>
+        <li>M</li>
+        <li>A</li>
+        <li>X</li>
+
+    </ul>
+
+    <script>
+
+        const allLi = document.querySelectorAll("li");
+        allLi.forEach(item => { item.style.cssText = ` transform:translate(${Math.random() * (300 + 300) - 300}px,${Math.random() * (300 + 300) - 300}px);opacity:0;` })
+
+
+        setTimeout(() => {
+            allLi.forEach(item => { item.style.cssText = ` transform:translate(0px,0px);opacity:1;` })
+        }, 0);
+       
+        document.querySelector("script").innerHTML = ""
+    </script>
+</body>
+
+</html>
